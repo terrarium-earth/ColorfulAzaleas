@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "colorful-azaleas:block/orange_azalea_leaves",
+    "bottom": "colorful-azaleas:block/orange_azalea_leaves",
+    "top": "colorful-azaleas:block/orange_flowering_azalea_leaves",
+    "side": "colorful-azaleas:block/orange_blooming_azalea_leaves"
+  }
+}

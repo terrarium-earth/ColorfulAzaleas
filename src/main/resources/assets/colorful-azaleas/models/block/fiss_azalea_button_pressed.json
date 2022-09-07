@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "colorful-azaleas:block/fiss_azalea_planks"
+  }
+}

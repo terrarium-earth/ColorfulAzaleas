@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "colorful-azaleas:block/titanium_azalea_planks",
+    "side": "colorful-azaleas:block/titanium_azalea_planks",
+    "top": "colorful-azaleas:block/titanium_azalea_planks"
+  }
+}

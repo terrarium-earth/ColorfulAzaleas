@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colorful-azaleas:block/bright_azalea_slab"
+    },
+    "type=double": {
+      "model": "colorful-azaleas:block/bright_azalea_planks"
+    },
+    "type=top": {
+      "model": "colorful-azaleas:block/bright_azalea_slab_top"
+    }
+  }
+}

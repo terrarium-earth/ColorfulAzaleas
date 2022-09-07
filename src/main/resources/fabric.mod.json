@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "colorful-azaleas",
+  "version": "1.19.2",
+
+  "name": "Colorful Azaleas",
+  "description": "Adds more colorful Azalea trees to your world!",
+  "authors": [
+    "Kekie6"
+  ],
+  "contact": {
+    "Discord": "https://discord.gg/NPjsPFEYbN",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "All Rights Reserved",
+  "icon": "assets/colorfulAzaleas/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.fabricmc.colorfulazaleas.ColorfulAzaleas"
+    ],
+    "client": [
+      "net.fabricmc.colorfulazaleas.ColorfulAzaleasClient"
+    ]
+  },
+  "mixins": [
+    "colorful-azaleas.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

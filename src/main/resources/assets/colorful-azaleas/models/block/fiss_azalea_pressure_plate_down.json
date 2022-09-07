@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "colorful-azaleas:block/fiss_azalea_planks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "colorful-azaleas:block/red_flowering_azalea_leaves",
+    "particle": "colorful-azaleas:block/red_flowering_azalea_leaves"
+  }
+}

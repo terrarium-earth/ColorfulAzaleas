@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_top",
+  "textures": {
+    "texture": "colorful-azaleas:block/roze_azalea_trapdoor"
+  }
+}

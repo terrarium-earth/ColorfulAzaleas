@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "colorful-azaleas:roze_azalea_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "colorful-azaleas:roze_azalea_planks"
+  }
+}
