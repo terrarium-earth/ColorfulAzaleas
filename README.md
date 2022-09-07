@@ -1,3 +1,10 @@
+#Special thanks to these amazing people:
+- REI for inspiring me with the idea to make this mod in the first place
+- Ashly for telling me to not be lazy and learn Java
+- Adrian for letting me be lazy anyway and helping me with writing the difficult bits of code
+- Gravy for telling me shedanial has a website that lets me convert yarn mappings to mojang mappings
+
+
 # ColorfulAzaleas
 A 1.19 Fabric mod that adds really cool azalea trees in a whole bunch of colors! :)
 
