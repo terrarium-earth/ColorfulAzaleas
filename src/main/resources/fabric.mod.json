@@ -13,7 +13,7 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "All Rights Reserved",
+  "license": "Modified-MIT-Lincense",
   "icon": "assets/colorfulAzaleas/icon.png",
 
   "environment": "*",
