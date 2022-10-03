@@ -3,11 +3,13 @@ package com.kekie6.colorfulazaleas.registry;
 import com.kekie6.colorfulazaleas.ColorfulAzaleas;
 import com.kekie6.colorfulazaleas.blocks.ColorfulAzaleaBushBlock;
 import com.kekie6.colorfulazaleas.blocks.DroopingLeavesBlock;
+import com.kekie6.colorfulazaleas.compat.AzaleaHalfDoors;
 import com.kekie6.colorfulazaleas.util.ColorfulAzaleaTreeGrower;
 import com.kekie6.colorfulazaleas.util.ColorfulTreeDecorator;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
@@ -134,6 +136,9 @@ public class AzaleaBlocks {
             this.stair = registerBlock(name + "_azalea_stairs", new StairBlock(planks.defaultBlockState(), FabricBlockSettings.copyOf(planks)));
             this.slab = registerBlock(name + "_azalea_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)));
             this.door = registerBlock(name + "_azalea_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR)));
+            if (FabricLoader.getInstance().isModLoaded("halfdoors")) {
+                AzaleaHalfDoors.registerHalfDoor(name + "_azalea_halfdoor");
+            }
             this.trapdoor = registerBlock(name + "_azalea_trapdoor", new TrapDoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR)));
             this.fence = registerBlock(name + "_azalea_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
             this.fence_gate = registerBlock(name + "_azalea_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE)));

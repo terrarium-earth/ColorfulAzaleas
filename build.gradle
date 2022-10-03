@@ -8,6 +8,9 @@ group = project.maven_group
 
 repositories {
 	maven { url = "https://maven.parchmentmc.org" }
+	maven { url = "https://maven.willbl.dev/releases" }
+	maven { url = "https://maven.terraformersmc.com/" }
+	maven { url = "https://ladysnake.jfrog.io/artifactory/mods" }
 }
 
 dependencies {
@@ -18,6 +21,9 @@ dependencies {
 	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation "amymialee:half-doors:1.3.10+1.19.x"
 }
 
 processResources {
