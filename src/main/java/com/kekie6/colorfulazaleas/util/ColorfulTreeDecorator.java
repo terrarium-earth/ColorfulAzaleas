@@ -1,8 +1,9 @@
-package net.fabricmc.colorfulazaleas;
+package com.kekie6.colorfulazaleas.util;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import com.kekie6.colorfulazaleas.ColorfulAzaleas;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
@@ -16,7 +17,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class ColorfulTreeDecorator extends TreeDecorator {
-    public static final float PROBABILITY = 0.2f;
     public static final Codec<ColorfulTreeDecorator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             Registry.BLOCK.byNameCodec().fieldOf("leafBlock").forGetter(ColorfulTreeDecorator::getLeafBlock),
             Registry.BLOCK.byNameCodec().fieldOf("logBlock").forGetter(ColorfulTreeDecorator::getLogBlock)
@@ -24,7 +24,6 @@ public class ColorfulTreeDecorator extends TreeDecorator {
     public static final List<Direction> ACCEPTABLE_POS = List.of(Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST);
     public final Block leafBlock;
     public final Block logBlock;
-
 
     public ColorfulTreeDecorator(Block leafBlock, Block logBlock) {
         this.leafBlock = leafBlock;
@@ -68,7 +67,5 @@ public class ColorfulTreeDecorator extends TreeDecorator {
                 context.setBlock(placementPosition, this.getLogBlock().defaultBlockState());
             }
         }
-
     }
 }
-

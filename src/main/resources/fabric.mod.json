@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.colorfulazaleas.ColorfulAzaleas"
+      "com.kekie6.colorfulazaleas.ColorfulAzaleas"
     ],
     "client": [
-      "net.fabricmc.colorfulazaleas.ColorfulAzaleasClient"
+      "com.kekie6.colorfulazaleas.ColorfulAzaleasClient"
     ]
   },
   "mixins": [
