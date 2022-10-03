@@ -1,9 +1,8 @@
-package net.fabricmc.colorfulazaleas;
+package com.kekie6.colorfulazaleas.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -15,11 +14,9 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
-import org.lwjgl.openal.EXTExponentDistance;
 
-class DroopingLeavesBlock extends Block {
-
+@SuppressWarnings({"deprecation", "NullableProblems"})
+public class DroopingLeavesBlock extends Block {
     public static final VoxelShape SHAPE = Block.box(2.0D, 10.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     public static final VoxelShape EXTENDED_SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     public static final BooleanProperty EXTENDED = BooleanProperty.create("extended");
@@ -31,8 +28,9 @@ class DroopingLeavesBlock extends Block {
 
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
-        if (!state.canSurvive(level,currentPos))
+        if (!state.canSurvive(level,currentPos)) {
             return Blocks.AIR.defaultBlockState();
+        }
         return super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
     }
 
@@ -41,7 +39,7 @@ class DroopingLeavesBlock extends Block {
         if (!state.canSurvive(level, pos)) {
             level.removeBlock(pos, false);
         } else {
-            var newState = state.setValue(EXTENDED, level.getBlockState(pos.below()).is(this));
+            BlockState newState = state.setValue(EXTENDED, level.getBlockState(pos.below()).is(this));
             level.setBlock(pos, newState, Block.UPDATE_ALL);
         }
     }
@@ -61,5 +59,4 @@ class DroopingLeavesBlock extends Block {
         BlockState blockState = level.getBlockState(blockPos);
         return blockState.is(BlockTags.LEAVES) || blockState.is(this);
     }
-
 }
