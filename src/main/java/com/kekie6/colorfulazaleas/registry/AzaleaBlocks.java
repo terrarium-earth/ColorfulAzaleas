@@ -137,7 +137,7 @@ public class AzaleaBlocks {
             this.slab = registerBlock(name + "_azalea_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)));
             this.door = registerBlock(name + "_azalea_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR)));
             if (FabricLoader.getInstance().isModLoaded("halfdoors")) {
-                AzaleaHalfDoors.registerHalfDoor(name + "_azalea_halfdoor");
+                AzaleaHalfDoors.registerHalfDoor(ColorfulAzaleas.id(name + "_azalea_halfdoor"));
             }
             this.trapdoor = registerBlock(name + "_azalea_trapdoor", new TrapDoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR)));
             this.fence = registerBlock(name + "_azalea_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
