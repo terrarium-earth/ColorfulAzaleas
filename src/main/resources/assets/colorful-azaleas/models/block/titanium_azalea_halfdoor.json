@@ -1,0 +1,6 @@
+{
+  "parent": "halfdoors:block/door",
+  "textures": {
+    "bottom": "colorful-azaleas:block/titanium_azalea_halfdoor"
+  }
+}

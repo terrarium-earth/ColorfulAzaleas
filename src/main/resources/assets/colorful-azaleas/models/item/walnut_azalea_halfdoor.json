@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "colorful-azaleas:item/walnut_azalea_halfdoor_item"
+  }
+}
