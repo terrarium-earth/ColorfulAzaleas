@@ -6,7 +6,6 @@ import com.google.auto.service.AutoService;
 import com.kekie6.colorfulazaleas.ColorfulAzaleas;
 import com.kekie6.colorfulazaleas.ColorfulAzaleasFabric;
 import com.kekie6.colorfulazaleas.platform.services.IPlatformHelper;
-import com.kekie6.colorfulazaleas.registry.RegistryObject;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -15,8 +14,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,14 +21,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-
-import java.util.Optional;
-import java.util.function.Supplier;
 
 @AutoService(IPlatformHelper.class)
 public class FabricPlatformHelper implements IPlatformHelper {
@@ -82,7 +75,7 @@ public class FabricPlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public ConfiguredFeature<?, ?> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
-        return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, ColorfulAzaleas.id(name), value);
+    public Holder<ConfiguredFeature<?, ?>> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
+        return BuiltinRegistries.register(BuiltinRegistries.CONFIGURED_FEATURE, ColorfulAzaleas.id(name), value);
     }
 }

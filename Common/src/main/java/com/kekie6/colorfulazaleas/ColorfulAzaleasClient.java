@@ -9,10 +9,10 @@ public class ColorfulAzaleasClient {
         for (int i = 0; i < AzaleaBlocks.AzaleaColors.values().length; i++) {
             AzaleaBlocks.ColorfulTree tree = AzaleaBlocks.trees[i];
             Services.PLATFORM.setRenderType(tree.sapling.get(), RenderType.cutout());
-            Services.PLATFORM.setRenderType(tree.sapling.get(), RenderType.cutout());
-            Services.PLATFORM.setRenderType(tree.sapling.get(), RenderType.cutout());
-            Services.PLATFORM.setRenderType(tree.sapling.get(), RenderType.cutout());
-            Services.PLATFORM.setRenderType(tree.sapling.get(), RenderType.cutout());
+            Services.PLATFORM.setRenderType(tree.floweringLeaves.get(), RenderType.cutout());
+            Services.PLATFORM.setRenderType(tree.bloomingLeaves.get(), RenderType.cutout());
+            Services.PLATFORM.setRenderType(tree.azaleaLeaves.get(), RenderType.cutout());
+            Services.PLATFORM.setRenderType(tree.droopingLeaves.get(), RenderType.cutout());
             AzaleaBlocks.WoodType wood = tree.woodType;
             Services.PLATFORM.setRenderType(wood.door.get(), RenderType.cutout());
             Services.PLATFORM.setRenderType(wood.trapdoor.get(), RenderType.cutout());

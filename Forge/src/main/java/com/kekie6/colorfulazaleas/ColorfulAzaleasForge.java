@@ -30,9 +30,9 @@ public class ColorfulAzaleasForge {
     };
 
     public ColorfulAzaleasForge() {
-        ColorfulAzaleas.init();
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ColorfulAzaleas.init();
         GLOBAL_LOOT_MODIFIERS.register(eventBus);
     }
 }

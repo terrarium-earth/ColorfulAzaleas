@@ -7,6 +7,7 @@ import com.kekie6.colorfulazaleas.platform.Services;
 import com.kekie6.colorfulazaleas.util.ColorfulAzaleaTreeGrower;
 import com.kekie6.colorfulazaleas.util.ColorfulTreeDecorator;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -66,7 +67,7 @@ public class AzaleaBlocks {
         public final RegistryObject<Block> floweringLeaves;
         public final RegistryObject<Block> bloomingLeaves;
         public final RegistryObject<Block> droopingLeaves;
-        public final ConfiguredFeature<?, ?> feature;
+        public final Holder<ConfiguredFeature<?, ?>> feature;
 
         public ColorfulTree(AzaleaColors color) {
             String name = color.name();
@@ -76,7 +77,7 @@ public class AzaleaBlocks {
             this.bloomingLeaves = registerBlock(name + "_blooming_azalea_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).requiresCorrectToolForDrops()));
             this.droopingLeaves = registerBlock(name + "_drooping_azalea_leaves", () -> new DroopingLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).noCollission().sound(SoundType.CAVE_VINES)));
             this.feature = Services.PLATFORM.registerConfiguredFeature(name + "_azalea_tree", makeAzaleaFeature(this.woodType.log.get(), this.floweringLeaves.get(), this.bloomingLeaves.get(), this.droopingLeaves.get()));
-            this.sapling = registerBlock(name + "_azalea_sapling", () -> new ColorfulAzaleaBushBlock(new ColorfulAzaleaTreeGrower(feature), BlockBehaviour.Properties.copy(Blocks.AZALEA).noOcclusion()));
+            this.sapling = registerBlock(name + "_azalea_sapling", () -> new ColorfulAzaleaBushBlock(new ColorfulAzaleaTreeGrower(feature.value()), BlockBehaviour.Properties.copy(Blocks.AZALEA).noOcclusion()));
             Services.PLATFORM.addBlockToAzaleaLootTable(sapling.get());
         }
 
@@ -123,7 +124,7 @@ public class AzaleaBlocks {
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
         RegistryObject<Block> registryObject = BLOCKS.register(name, block);
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(Services.PLATFORM.getCreativeTab())));
+        ITEMS.register(name, () -> new BlockItem(registryObject.get(), new Item.Properties().tab(Services.PLATFORM.getCreativeTab())));
         return registryObject;
     }
 }

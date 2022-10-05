@@ -61,5 +61,5 @@ public interface IPlatformHelper {
 
     CreativeModeTab getCreativeTab();
 
-    ConfiguredFeature<?, ?> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value);
+    Holder<ConfiguredFeature<?, ?>> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value);
 }

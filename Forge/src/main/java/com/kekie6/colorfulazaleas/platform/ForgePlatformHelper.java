@@ -4,6 +4,7 @@ import com.google.auto.service.AutoService;
 import com.kekie6.colorfulazaleas.ColorfulAzaleasForge;
 import com.kekie6.colorfulazaleas.platform.services.IPlatformHelper;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
@@ -11,6 +12,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.NoSuchElementException;
 
 @AutoService(IPlatformHelper.class)
 public class ForgePlatformHelper implements IPlatformHelper {
@@ -54,8 +57,8 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public ConfiguredFeature<?, ?> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
+    public Holder<ConfiguredFeature<?, ?>> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
         RegistryObject<ConfiguredFeature<?, ?>> registeredValue = ColorfulAzaleasForge.CONFIGURED_FEATURES.register(name, () -> value);
-        return registeredValue.get();
+        return registeredValue.getHolder().orElseThrow(NoSuchElementException::new);
     }
 }
