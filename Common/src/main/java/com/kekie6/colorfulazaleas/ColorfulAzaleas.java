@@ -11,7 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class ColorfulAzaleas {
-    public static final String MOD_ID = "colorful_azaleas";
+    public static final String MOD_ID = "colorfulazaleas";
     public static final String MOD_NAME = "Colorful Azaleas";
     public static final Logger LOG = LogManager.getLogger(MOD_NAME);
 

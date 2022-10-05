@@ -1,31 +1,31 @@
 {
   "values": [
-    "colorful_azaleas:orange_azalea_leaves",
-    "colorful_azaleas:orange_blooming_azalea_leaves",
-    "colorful_azaleas:orange_flowering_azalea_leaves",
+    "colorfulazaleas:orange_azalea_leaves",
+    "colorfulazaleas:orange_blooming_azalea_leaves",
+    "colorfulazaleas:orange_flowering_azalea_leaves",
 
-    "colorful_azaleas:yellow_azalea_leaves",
-    "colorful_azaleas:yellow_blooming_azalea_leaves",
-    "colorful_azaleas:yellow_flowering_azalea_leaves",
+    "colorfulazaleas:yellow_azalea_leaves",
+    "colorfulazaleas:yellow_blooming_azalea_leaves",
+    "colorfulazaleas:yellow_flowering_azalea_leaves",
     
-    "colorful_azaleas:red_azalea_leaves",
-    "colorful_azaleas:red_blooming_azalea_leaves",
-    "colorful_azaleas:red_flowering_azalea_leaves",
+    "colorfulazaleas:red_azalea_leaves",
+    "colorfulazaleas:red_blooming_azalea_leaves",
+    "colorfulazaleas:red_flowering_azalea_leaves",
     
-    "colorful_azaleas:pink_azalea_leaves",
-    "colorful_azaleas:pink_blooming_azalea_leaves",
-    "colorful_azaleas:pink_flowering_azalea_leaves",
+    "colorfulazaleas:pink_azalea_leaves",
+    "colorfulazaleas:pink_blooming_azalea_leaves",
+    "colorfulazaleas:pink_flowering_azalea_leaves",
 
-    "colorful_azaleas:blue_azalea_leaves",
-    "colorful_azaleas:blue_blooming_azalea_leaves",
-    "colorful_azaleas:blue_flowering_azalea_leaves",
+    "colorfulazaleas:blue_azalea_leaves",
+    "colorfulazaleas:blue_blooming_azalea_leaves",
+    "colorfulazaleas:blue_flowering_azalea_leaves",
 
-    "colorful_azaleas:purple_azalea_leaves",
-    "colorful_azaleas:purple_blooming_azalea_leaves",
-    "colorful_azaleas:purple_flowering_azalea_leaves",
+    "colorfulazaleas:purple_azalea_leaves",
+    "colorfulazaleas:purple_blooming_azalea_leaves",
+    "colorfulazaleas:purple_flowering_azalea_leaves",
 
-    "colorful_azaleas:white_azalea_leaves",
-    "colorful_azaleas:white_blooming_azalea_leaves",
-    "colorful_azaleas:white_flowering_azalea_leaves"
+    "colorfulazaleas:white_azalea_leaves",
+    "colorfulazaleas:white_blooming_azalea_leaves",
+    "colorfulazaleas:white_flowering_azalea_leaves"
   ]
 }

@@ -32,10 +32,9 @@ import java.util.function.Supplier;
 public class AzaleaBlocks {
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registry.BLOCK, ColorfulAzaleas.MOD_ID);
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM, ColorfulAzaleas.MOD_ID);
-    private static final RegistrationProvider<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = RegistrationProvider.get(Registry.CONFIGURED_FEATURE_REGISTRY, ColorfulAzaleas.MOD_ID);
 
     public static ColorfulTree[] trees;
-    public static final RegistryObject<DroopingLeavesBlock> DROOPING_AZALEA_LEAVES = BLOCKS.register("drooping_azalea_leaves", () -> new DroopingLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).noCollission().sound(SoundType.CAVE_VINES)));
+    public static final RegistryObject<Block> DROOPING_AZALEA_LEAVES = registerBlock("drooping_azalea_leaves", () -> new DroopingLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).noCollission().sound(SoundType.CAVE_VINES)));
 
     public static void init() {
         trees = new ColorfulTree[AzaleaColors.values().length];
@@ -62,12 +61,12 @@ public class AzaleaBlocks {
 
     public static class ColorfulTree {
         public final WoodType woodType;
-        public final Supplier<Block> azaleaLeaves;
-        public final Supplier<Block> floweringLeaves;
-        public final Supplier<Block> bloomingLeaves;
-        public final Supplier<Block> droopingLeaves;
-        public final RegistryObject<ConfiguredFeature<TreeConfiguration, ?>> feature;
-        public final Supplier<Block> sapling;
+        public final RegistryObject<Block> sapling;
+        public final RegistryObject<Block> azaleaLeaves;
+        public final RegistryObject<Block> floweringLeaves;
+        public final RegistryObject<Block> bloomingLeaves;
+        public final RegistryObject<Block> droopingLeaves;
+        public final ConfiguredFeature<?, ?> feature;
 
         public ColorfulTree(AzaleaColors color) {
             String name = color.name();
@@ -76,26 +75,30 @@ public class AzaleaBlocks {
             this.floweringLeaves = registerBlock(name + "_flowering_azalea_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
             this.bloomingLeaves = registerBlock(name + "_blooming_azalea_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).requiresCorrectToolForDrops()));
             this.droopingLeaves = registerBlock(name + "_drooping_azalea_leaves", () -> new DroopingLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).noCollission().sound(SoundType.CAVE_VINES)));
-            this.feature = registerAzaleaFeature(name + "_azalea_feature", woodType.log, floweringLeaves, droopingLeaves, bloomingLeaves);
-            this.sapling = registerBlock(name + "_azalea_sapling", () -> new ColorfulAzaleaBushBlock(new ColorfulAzaleaTreeGrower(this.feature.get()), BlockBehaviour.Properties.copy(Blocks.AZALEA).noOcclusion()));
+            this.feature = Services.PLATFORM.registerConfiguredFeature(name + "_azalea_tree", makeAzaleaFeature(this.woodType.log.get(), this.floweringLeaves.get(), this.bloomingLeaves.get(), this.droopingLeaves.get()));
+            this.sapling = registerBlock(name + "_azalea_sapling", () -> new ColorfulAzaleaBushBlock(new ColorfulAzaleaTreeGrower(feature), BlockBehaviour.Properties.copy(Blocks.AZALEA).noOcclusion()));
             Services.PLATFORM.addBlockToAzaleaLootTable(sapling.get());
+        }
+
+        private static ConfiguredFeature<TreeConfiguration, ?> makeAzaleaFeature(Block log, Block floweringLeaves, Block bloomingLeaves, Block droopingLeaves) {
+            return new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(log), new FancyTrunkPlacer(8, 4, 6), new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(Blocks.AZALEA_LEAVES.defaultBlockState(), 3).add(floweringLeaves.defaultBlockState(), 1).build()), new FancyFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3), new TwoLayersFeatureSize(1, 0, 1)).dirt(BlockStateProvider.simple(Blocks.ROOTED_DIRT)).decorators(List.of(new AttachedToLeavesDecorator(Integer.MAX_VALUE, 0, 1, BlockStateProvider.simple(bloomingLeaves.defaultBlockState()), 0, List.of(Direction.DOWN)), new ColorfulTreeDecorator(droopingLeaves, log))).forceDirt().build());
         }
     }
 
     public static class WoodType {
-        public final Supplier<Block> log;
-        public final Supplier<Block> wood;
-        public final Supplier<Block> stripped_log;
-        public final Supplier<Block> stripped_wood;
-        public final Supplier<Block> planks;
-        public final Supplier<Block> stair;
-        public final Supplier<Block> slab;
-        public final Supplier<Block> door;
-        public final Supplier<Block> trapdoor;
-        public final Supplier<Block> fence;
-        public final Supplier<Block> fence_gate;
-        public final Supplier<Block> pressure_plate;
-        public final Supplier<Block> button;
+        public final RegistryObject<Block> log;
+        public final RegistryObject<Block> wood;
+        public final RegistryObject<Block> stripped_log;
+        public final RegistryObject<Block> stripped_wood;
+        public final RegistryObject<Block> planks;
+        public final RegistryObject<Block> stair;
+        public final RegistryObject<Block> slab;
+        public final RegistryObject<Block> door;
+        public final RegistryObject<Block> trapdoor;
+        public final RegistryObject<Block> fence;
+        public final RegistryObject<Block> fence_gate;
+        public final RegistryObject<Block> pressure_plate;
+        public final RegistryObject<Block> button;
 
         public WoodType(AzaleaColors color) {
             String name = color.title;
@@ -118,13 +121,9 @@ public class AzaleaBlocks {
         }
     }
 
-    private static Supplier<Block> registerBlock(String name, Supplier<Block> block) {
-        BLOCKS.register(name, block);
+    public static RegistryObject<Block> registerBlock(String name, Supplier<Block> block) {
+        RegistryObject<Block> registryObject = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(Services.PLATFORM.getCreativeTab())));
-        return block;
-    }
-
-    private static RegistryObject<ConfiguredFeature<TreeConfiguration, ?>> registerAzaleaFeature(String name, Supplier<Block> log, Supplier<Block> floweringLeaves, Supplier<Block> droopingLeaves, Supplier<Block> bloomingLeaves) {
-        return CONFIGURED_FEATURES.register(name, () -> new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(log.get()), new FancyTrunkPlacer(8, 4, 6), new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(Blocks.AZALEA_LEAVES.defaultBlockState(), 3).add(floweringLeaves.get().defaultBlockState(), 1).build()), new FancyFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3), new TwoLayersFeatureSize(1, 0, 1)).dirt(BlockStateProvider.simple(Blocks.ROOTED_DIRT)).decorators(List.of(new AttachedToLeavesDecorator(Integer.MAX_VALUE, 0, 1, BlockStateProvider.simple(bloomingLeaves.get().defaultBlockState()), 0, List.of(Direction.DOWN)), new ColorfulTreeDecorator(droopingLeaves.get(), log.get()))).forceDirt().build()));
+        return registryObject;
     }
 }

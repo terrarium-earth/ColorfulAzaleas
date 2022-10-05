@@ -19,7 +19,7 @@ minecraft {
             }
         }
     }
-    accessWideners "src/main/resources/colorful_azaleas.accesswidener"
+    accessWideners "src/main/resources/colorfulazaleas.accesswidener"
 }
 
 dependencies {

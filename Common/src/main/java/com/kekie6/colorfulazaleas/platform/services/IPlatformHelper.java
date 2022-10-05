@@ -1,15 +1,14 @@
 package com.kekie6.colorfulazaleas.platform.services;
 
-import com.kekie6.colorfulazaleas.registry.RegistryObject;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.function.Supplier;
+import java.util.Optional;
 
 public interface IPlatformHelper {
 
@@ -61,4 +60,6 @@ public interface IPlatformHelper {
     void registerHalfDoor(ResourceLocation resourceLocation);
 
     CreativeModeTab getCreativeTab();
+
+    ConfiguredFeature<?, ?> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value);
 }

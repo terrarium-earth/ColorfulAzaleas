@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "colorful_azaleas",
+  "id": "colorfulazaleas",
   "version": "${version}",
 
   "name": "Colorful Azaleas",
@@ -14,7 +14,7 @@
   },
 
   "license": "Modified-MIT-License",
-  "icon": "assets/colorful_azaleas/icon.png",
+  "icon": "assets/colorfulazaleas/icon.png",
 
   "environment": "*",
   "entrypoints": {

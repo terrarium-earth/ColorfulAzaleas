@@ -43,7 +43,7 @@ loom {
             runDir("run")
         }
     }
-    accessWidenerPath = file("src/main/resources/colorful-azaleas-fabric.accesswidener")
+    accessWidenerPath = file("src/main/resources/colorfulazaleas-fabric.accesswidener")
 }
 
 

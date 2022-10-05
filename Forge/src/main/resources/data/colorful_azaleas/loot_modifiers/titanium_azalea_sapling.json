@@ -1,5 +1,5 @@
 {
-  "type": "colorful_azaleas:generic",
+  "type": "colorfulazaleas:generic",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
@@ -10,5 +10,5 @@
       "chance": 0.01
     }
   ],
-  "item": "colorful_azaleas:titanium_azalea_sapling"
+  "item": "colorfulazaleas:titanium_azalea_sapling"
 }

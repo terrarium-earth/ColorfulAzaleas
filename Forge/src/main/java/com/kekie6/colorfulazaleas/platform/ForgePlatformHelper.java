@@ -3,21 +3,14 @@ package com.kekie6.colorfulazaleas.platform;
 import com.google.auto.service.AutoService;
 import com.kekie6.colorfulazaleas.ColorfulAzaleasForge;
 import com.kekie6.colorfulazaleas.platform.services.IPlatformHelper;
-import com.kekie6.colorfulazaleas.registry.RegistryObject;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.Holder;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.function.Supplier;
+import net.minecraftforge.registries.RegistryObject;
 
 @AutoService(IPlatformHelper.class)
 public class ForgePlatformHelper implements IPlatformHelper {
@@ -58,5 +51,11 @@ public class ForgePlatformHelper implements IPlatformHelper {
     @Override
     public CreativeModeTab getCreativeTab() {
         return ColorfulAzaleasForge.CREATIVE_TAB;
+    }
+
+    @Override
+    public ConfiguredFeature<?, ?> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
+        RegistryObject<ConfiguredFeature<?, ?>> registeredValue = ColorfulAzaleasForge.CONFIGURED_FEATURES.register(name, () -> value);
+        return registeredValue.get();
     }
 }

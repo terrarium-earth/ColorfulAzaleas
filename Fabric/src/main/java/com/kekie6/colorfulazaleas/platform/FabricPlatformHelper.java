@@ -3,6 +3,7 @@ package com.kekie6.colorfulazaleas.platform;
 import amymialee.halfdoors.Halfdoors;
 import amymialee.halfdoors.blocks.HalfDoorBlock;
 import com.google.auto.service.AutoService;
+import com.kekie6.colorfulazaleas.ColorfulAzaleas;
 import com.kekie6.colorfulazaleas.ColorfulAzaleasFabric;
 import com.kekie6.colorfulazaleas.platform.services.IPlatformHelper;
 import com.kekie6.colorfulazaleas.registry.RegistryObject;
@@ -14,6 +15,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -28,6 +30,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 @AutoService(IPlatformHelper.class)
@@ -76,5 +79,10 @@ public class FabricPlatformHelper implements IPlatformHelper {
     @Override
     public CreativeModeTab getCreativeTab() {
         return ColorfulAzaleasFabric.CREATIVE_TAB;
+    }
+
+    @Override
+    public ConfiguredFeature<?, ?> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
+        return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, ColorfulAzaleas.id(name), value);
     }
 }

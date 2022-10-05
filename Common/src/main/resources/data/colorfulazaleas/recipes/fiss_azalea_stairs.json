@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "key": {
+    "#": {
+      "item": "colorfulazaleas:fiss_azalea_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "colorfulazaleas:fiss_azalea_stairs"
+  }
+}

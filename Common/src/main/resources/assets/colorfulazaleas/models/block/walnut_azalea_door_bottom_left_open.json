@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "colorfulazaleas:block/walnut_azalea_door_bottom",
+    "top": "colorfulazaleas:block/walnut_azalea_door_top"
+  }
+}
