@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "colorful_azaleas:block/stripped_tecal_azalea_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "colorful_azaleas:block/stripped_tecal_azalea_log"
+    },
+    "axis=z": {
+      "model": "colorful_azaleas:block/stripped_tecal_azalea_log_horizontal",
+      "x": 90
+    }
+  }
+}

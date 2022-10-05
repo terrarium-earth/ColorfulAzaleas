@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_wall_open",
+  "textures": {
+    "texture": "colorful_azaleas:block/roze_azalea_planks"
+  }
+}

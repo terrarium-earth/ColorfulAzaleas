@@ -1,8 +1,0 @@
-{
-  "parent": "colorful-azaleas:block/template_colorful_azalea",
-  "textures": {
-    "side": "colorful-azaleas:block/pink_azalea_sapling_side",
-    "top": "colorful-azaleas:block/pink_azalea_sapling_top",
-    "plant": "colorful-azaleas:block/pink_azalea_sapling_bush"
-  }
-}

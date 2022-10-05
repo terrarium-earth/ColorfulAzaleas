@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "key": {
+    "#": {
+      "item": "colorful_azaleas:azule_azalea_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "colorful_azaleas:azule_azalea_trapdoor"
+  }
+}

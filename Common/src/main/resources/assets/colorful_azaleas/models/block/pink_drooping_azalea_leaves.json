@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "colorful_azaleas:block/pink_drooping_azalea_leaves",
+    "particle": "colorful_azaleas:block/pink_drooping_azalea_leaves"
+  }
+}

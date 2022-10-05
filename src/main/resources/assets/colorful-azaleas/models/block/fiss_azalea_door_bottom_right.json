@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_right",
-  "textures": {
-    "bottom": "colorful-azaleas:block/fiss_azalea_door_bottom",
-    "top": "colorful-azaleas:block/fiss_azalea_door_top"
-  }
-}

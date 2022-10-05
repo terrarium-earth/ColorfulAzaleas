@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "colorful_azaleas:block/titanium_azalea_planks"
+  }
+}
