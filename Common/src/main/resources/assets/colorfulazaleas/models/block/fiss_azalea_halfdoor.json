@@ -1,0 +1,6 @@
+{
+  "parent": "halfdoors:block/door",
+  "textures": {
+    "bottom": "colorfulazaleas:block/fiss_azalea_halfdoor"
+  }
+}

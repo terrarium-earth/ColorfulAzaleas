@@ -1,0 +1,8 @@
+{
+  "parent": "colorfulazaleas:block/template_colorful_azalea",
+  "textures": {
+    "side": "colorfulazaleas:block/red_azalea_sapling_side",
+    "top": "colorfulazaleas:block/red_azalea_sapling_top",
+    "plant": "colorfulazaleas:block/red_azalea_sapling_bush"
+  }
+}

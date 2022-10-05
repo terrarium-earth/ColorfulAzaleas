@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "colorfulazaleas:block/stripped_walnut_azalea_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "colorfulazaleas:block/stripped_walnut_azalea_log"
+    },
+    "axis=z": {
+      "model": "colorfulazaleas:block/stripped_walnut_azalea_log_horizontal",
+      "x": 90
+    }
+  }
+}

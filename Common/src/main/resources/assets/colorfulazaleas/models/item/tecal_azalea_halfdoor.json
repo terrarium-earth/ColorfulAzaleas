@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "colorfulazaleas:item/tecal_azalea_halfdoor_item"
+  }
+}

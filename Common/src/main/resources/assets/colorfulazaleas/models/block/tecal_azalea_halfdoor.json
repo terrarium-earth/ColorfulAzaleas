@@ -1,0 +1,6 @@
+{
+  "parent": "halfdoors:block/door",
+  "textures": {
+    "bottom": "colorfulazaleas:block/tecal_azalea_halfdoor"
+  }
+}

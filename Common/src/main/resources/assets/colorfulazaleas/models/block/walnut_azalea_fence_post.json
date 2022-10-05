@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "colorfulazaleas:block/walnut_azalea_planks"
+  }
+}

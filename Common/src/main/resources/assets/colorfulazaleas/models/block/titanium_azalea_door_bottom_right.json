@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "colorfulazaleas:block/titanium_azalea_door_bottom",
+    "top": "colorfulazaleas:block/titanium_azalea_door_top"
+  }
+}

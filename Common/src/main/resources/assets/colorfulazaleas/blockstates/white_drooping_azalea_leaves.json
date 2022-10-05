@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "extended=false": {"model": "colorfulazaleas:block/white_drooping_azalea_leaves"},
+    "extended=true": {"model": "colorfulazaleas:block/white_drooping_azalea_leaves_tall"}
+  }
+}

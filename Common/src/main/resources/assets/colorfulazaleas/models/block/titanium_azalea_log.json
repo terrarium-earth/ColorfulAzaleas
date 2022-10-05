@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "colorfulazaleas:block/titanium_azalea_log_top",
+    "side": "colorfulazaleas:block/titanium_azalea_log_side"
+  }
+}
