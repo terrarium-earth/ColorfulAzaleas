@@ -6,9 +6,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 
-import java.util.Optional;
+import java.util.function.Supplier;
 
 public interface IPlatformHelper {
 
@@ -34,32 +34,25 @@ public interface IPlatformHelper {
      */
     boolean isDevelopmentEnvironment();
 
-
-    /**
-     *
-     * Sets the render type of a block.
-     *
-     * @param block The block to set the render type for.
-     * @param renderType The render type to set the block to.
-     */
-    void setRenderType(Block block, RenderType renderType);
-
     /**
      *
      * Adds a block item to the azalea leaves loot table.
      *
      * @param block The block to add to the azalea leaves loot table.
      */
-    void addBlockToAzaleaLootTable(Block block);
+    void addBlockToAzaleaLootTable(Supplier<Block> block);
 
     /**
      *
      * Registers a half door, this should only be run if the halfdoors mod is present.
+     *
      * @param resourceLocation The resource location to register the half door under.
      */
     void registerHalfDoor(ResourceLocation resourceLocation);
 
+    /**
+     *
+     * @return The creative tab for the colorful azalea blocks.
+     */
     CreativeModeTab getCreativeTab();
-
-    Holder<ConfiguredFeature<?, ?>> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value);
 }

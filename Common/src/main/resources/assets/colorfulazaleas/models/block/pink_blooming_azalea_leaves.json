@@ -5,5 +5,6 @@
     "bottom": "colorfulazaleas:block/pink_azalea_leaves",
     "top": "colorfulazaleas:block/pink_flowering_azalea_leaves",
     "side": "colorfulazaleas:block/pink_blooming_azalea_leaves"
-  }
+  },
+  "render_type": "cutout"
 }

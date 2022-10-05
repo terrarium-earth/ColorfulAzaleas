@@ -21,10 +21,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+
+import java.util.function.Supplier;
 
 @AutoService(IPlatformHelper.class)
 public class FabricPlatformHelper implements IPlatformHelper {
@@ -45,18 +48,13 @@ public class FabricPlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public void setRenderType(Block block, RenderType renderType) {
-        BlockRenderLayerMap.INSTANCE.putBlock(block, renderType);
-    }
-
-    @Override
-    public void addBlockToAzaleaLootTable(Block block) {
+    public void addBlockToAzaleaLootTable(Supplier<Block> block) {
         LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
             if (Blocks.AZALEA_LEAVES.getLootTable().equals(id)) {
                 LootPool.Builder poolBuilder1 = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.01f))
-                        .add(LootItem.lootTableItem(block));
+                        .add(LootItem.lootTableItem(block.get()));
                 tableBuilder.pool(poolBuilder1.build());
             }
         }));
@@ -72,10 +70,5 @@ public class FabricPlatformHelper implements IPlatformHelper {
     @Override
     public CreativeModeTab getCreativeTab() {
         return ColorfulAzaleasFabric.CREATIVE_TAB;
-    }
-
-    @Override
-    public Holder<ConfiguredFeature<?, ?>> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
-        return BuiltinRegistries.register(BuiltinRegistries.CONFIGURED_FEATURE, ColorfulAzaleas.id(name), value);
     }
 }

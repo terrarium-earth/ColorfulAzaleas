@@ -3,5 +3,6 @@
   "textures": {
     "all": "colorfulazaleas:block/pink_azalea_leaves",
     "particle": "colorfulazaleas:block/pink_azalea_leaves"
-  }
+  },
+  "render_type": "cutout"
 }

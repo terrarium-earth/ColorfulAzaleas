@@ -9,11 +9,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.NoSuchElementException;
+import java.util.function.Supplier;
 
 @AutoService(IPlatformHelper.class)
 public class ForgePlatformHelper implements IPlatformHelper {
@@ -37,12 +39,7 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public void setRenderType(Block block, RenderType renderType) {
-        // Handled through Block Model JSON.
-    }
-
-    @Override
-    public void addBlockToAzaleaLootTable(Block block) {
+    public void addBlockToAzaleaLootTable(Supplier<Block> block) {
         // Handled through Global Loot Modifiers.
     }
 
@@ -54,11 +51,5 @@ public class ForgePlatformHelper implements IPlatformHelper {
     @Override
     public CreativeModeTab getCreativeTab() {
         return ColorfulAzaleasForge.CREATIVE_TAB;
-    }
-
-    @Override
-    public Holder<ConfiguredFeature<?, ?>> registerConfiguredFeature(String name, ConfiguredFeature<?, ?> value) {
-        RegistryObject<ConfiguredFeature<?, ?>> registeredValue = ColorfulAzaleasForge.CONFIGURED_FEATURES.register(name, () -> value);
-        return registeredValue.getHolder().orElseThrow(NoSuchElementException::new);
     }
 }

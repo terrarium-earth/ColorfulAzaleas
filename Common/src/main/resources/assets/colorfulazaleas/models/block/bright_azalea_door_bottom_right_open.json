@@ -3,5 +3,6 @@
   "textures": {
     "bottom": "colorfulazaleas:block/bright_azalea_door_bottom",
     "top": "colorfulazaleas:block/bright_azalea_door_top"
-  }
+  },
+  "render_type": "cutout"
 }

@@ -4,5 +4,6 @@
     "side": "colorfulazaleas:block/white_azalea_sapling_side",
     "top": "colorfulazaleas:block/white_azalea_sapling_top",
     "plant": "colorfulazaleas:block/white_azalea_sapling_bush"
-  }
+  },
+  "render_type": "cutout"
 }

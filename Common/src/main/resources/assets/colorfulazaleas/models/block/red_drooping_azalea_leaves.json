@@ -3,5 +3,6 @@
   "textures": {
     "cross": "colorfulazaleas:block/red_drooping_azalea_leaves",
     "particle": "colorfulazaleas:block/red_drooping_azalea_leaves"
-  }
+  },
+  "render_type": "cutout"
 }

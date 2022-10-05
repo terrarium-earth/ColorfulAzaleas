@@ -6,12 +6,9 @@ license="Modified-MIT-License"
 modId="colorfulazaleas"
 version="${file.jarVersion}"
 displayName="ColorfulAzaleas"
-logoFile="colorfulazaleas.png" #optional
-# A text field displayed in the mod UI
-# credits="Thanks for this example mod goes to Java" #optional
-# A text field displayed in the mod UI
-authors="Kekie6" #optional
-# The description text for the mod (multi line!) (#mandatory)
+logoFile="colorfulazaleas.png"
+# credits="Thanks for this example mod goes to Java"
+authors="Kekie6"
 description='''
 Adds more colorful Azalea trees to your world!
 '''
