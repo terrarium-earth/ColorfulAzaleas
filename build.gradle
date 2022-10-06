@@ -7,7 +7,7 @@ subprojects {
     java.withJavadocJar()
         
     jar {
-        from(rootProject.file("LICENSE")) {
+        from(rootProject.file("LICENSE.md")) {
             rename { "${it}_${mod_name}" }
         }
         manifest {
@@ -27,7 +27,7 @@ subprojects {
     }
 
     sourcesJar {
-        from(rootProject.file("LICENSE")) {
+        from(rootProject.file("LICENSE.md")) {
             rename { "${it}_${mod_name}" }
         }
     }
