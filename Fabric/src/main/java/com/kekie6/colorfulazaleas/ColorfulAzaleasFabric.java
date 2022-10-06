@@ -14,7 +14,7 @@ public class ColorfulAzaleasFabric implements ModInitializer {
     public void onInitialize() {
         ColorfulAzaleas.init();
 
-        for (int i = 0; i < AzaleaBlocks.AzaleaColors.values().length; i++) {
+        for (int i = 0; i < AzaleaBlocks.trees.length; i++) {
             AzaleaBlocks.ColorfulTree tree = AzaleaBlocks.trees[i];
             StrippableBlockRegistry.register(tree.woodType.log.get(), tree.woodType.stripped_log.get());
             StrippableBlockRegistry.register(tree.woodType.wood.get(), tree.woodType.stripped_wood.get());
