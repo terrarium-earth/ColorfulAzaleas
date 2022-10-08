@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "colorfulazaleas",
+  "version": "${version}",
+
+  "name": "Colorful Azaleas",
+  "description": "Adds more colorful Azalea trees to your world!",
+  "authors": [
+    "Kekie6"
+  ],
+  "contact": {
+    "Discord": "https://discord.gg/NPjsPFEYbN",
+    "sources": "https://github.com/terrarium-earth/ColorfulAzaleas"
+  },
+
+  "license": "Modified-MIT-License",
+  "icon": "assets/colorfulazaleas/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kekie6.colorfulazaleas.ColorfulAzaleasFabric"
+    ],
+    "client": [
+      "com.kekie6.colorfulazaleas.ColorfulAzaleasClientFabric"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  }
+}

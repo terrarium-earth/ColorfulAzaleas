@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "colorfulazaleas:block/azule_azalea_door_bottom",
+    "top": "colorfulazaleas:block/azule_azalea_door_top"
+  },
+  "render_type": "cutout"
+}

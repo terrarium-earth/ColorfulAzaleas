@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "colorfulazaleas:block/fiss_azalea_planks",
+    "side": "colorfulazaleas:block/fiss_azalea_planks",
+    "top": "colorfulazaleas:block/fiss_azalea_planks"
+  }
+}

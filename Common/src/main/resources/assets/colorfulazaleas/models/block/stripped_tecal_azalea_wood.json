@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "colorfulazaleas:block/stripped_tecal_azalea_log_side",
+    "particle": "colorfulazaleas:block/stripped_tecal_azalea_log_side"
+
+  }
+}

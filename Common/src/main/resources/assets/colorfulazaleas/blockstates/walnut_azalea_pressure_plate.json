@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "colorfulazaleas:block/walnut_azalea_pressure_plate"
+    },
+    "powered=true": {
+      "model": "colorfulazaleas:block/walnut_azalea_pressure_plate_down"
+    }
+  }
+}

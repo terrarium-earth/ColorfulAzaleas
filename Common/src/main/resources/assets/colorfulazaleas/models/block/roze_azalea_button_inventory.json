@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "colorfulazaleas:block/roze_azalea_planks"
+  }
+}

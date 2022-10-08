@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "colorfulazaleas:block/pink_drooping_azalea_leaves"
+  }
+}

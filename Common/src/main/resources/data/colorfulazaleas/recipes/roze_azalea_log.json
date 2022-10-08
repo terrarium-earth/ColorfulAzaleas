@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "bark",
+  "ingredients": [
+    {
+      "count": 3,
+      "item": "colorfulazaleas:roze_azalea_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "colorfulazaleas:roze_azalea_log"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_dye"
+    },
+    {
+      "tag": "colorfulazaleas:azaleas"
+    }
+  ],
+  "result": {
+    "item": "colorfulazaleas:pink_azalea_sapling"
+  }
+}

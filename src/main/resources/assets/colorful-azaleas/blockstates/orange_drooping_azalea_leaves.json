@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "extended=false": {"model": "colorful-azaleas:block/orange_drooping_azalea_leaves"},
-    "extended=true": {"model": "colorful-azaleas:block/orange_drooping_azalea_leaves_tall"}
-  }
-}

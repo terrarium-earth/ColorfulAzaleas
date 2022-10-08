@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "colorful-azaleas:block/yellow_drooping_azalea_leaves_tall",
-    "particle": "colorful-azaleas:block/yellow_drooping_azalea_leaves_tall"
-  }
-}
