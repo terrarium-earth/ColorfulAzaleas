@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "titanium_azalea_halfdoor",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "colorfulazaleas:titanium_azalea_door"
+    }
+  },
+  "result": {
+    "item": "colorfulazaleas:titanium_azalea_halfdoor",
+    "count": 6
+  },
+  "fabric:conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "halfdoors"
+      ]
+    }
+  ]
+}

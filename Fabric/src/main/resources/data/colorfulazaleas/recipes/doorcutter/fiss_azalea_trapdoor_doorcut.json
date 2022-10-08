@@ -1,0 +1,16 @@
+{
+  "type": "halfdoors:doorcutting",
+  "ingredient": {
+    "item": "colorfulazaleas:fiss_azalea_door"
+  },
+  "result": "colorfulazaleas:fiss_azalea_trapdoor",
+  "count": 2,
+  "fabric:conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "halfdoors"
+      ]
+    }
+  ]
+}
