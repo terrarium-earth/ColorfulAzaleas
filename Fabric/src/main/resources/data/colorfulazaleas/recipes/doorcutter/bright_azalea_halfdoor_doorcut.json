@@ -5,7 +5,7 @@
   },
   "result": "colorfulazaleas:bright_azalea_halfdoor",
   "count": 2,
-  "fabric:conditions": [
+  "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
       "values": [

@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "minecraft:tecal_azalea_door"
+              "colorfulazaleas:tecal_azalea_door"
             ]
           }
         ]
@@ -31,7 +31,7 @@
       "has_the_recipe"
     ]
   ],
-  "fabric:conditions": [
+  "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
