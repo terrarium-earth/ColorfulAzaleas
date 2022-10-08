@@ -91,7 +91,10 @@ processResources {
 }
 
 
-jar.finalizedBy('reobfJar')
+jar {
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
+    finalizedBy('reobfJar')
+}
 
 publishing {
     publications {
@@ -108,3 +111,5 @@ publishing {
         }
     }
 }
+
+
