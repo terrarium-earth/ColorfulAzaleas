@@ -62,6 +62,7 @@ public class AzaleaBlocks {
     }
 
     public static class ColorfulTree {
+        public final String name;
         public final WoodType woodType;
         public final RegistryObject<Block> sapling;
         public final RegistryObject<Block> azaleaLeaves;
@@ -71,7 +72,7 @@ public class AzaleaBlocks {
         public final RegistryObject<ConfiguredFeature<TreeConfiguration, ?>> feature;
 
         public ColorfulTree(AzaleaColors color) {
-            String name = color.name();
+            this.name = color.name();
             this.woodType = new WoodType(color);
             this.azaleaLeaves = registerBlock(name + "_azalea_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
             this.floweringLeaves = registerBlock(name + "_flowering_azalea_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
@@ -88,6 +89,7 @@ public class AzaleaBlocks {
     }
 
     public static class WoodType {
+        public final String name;
         public final RegistryObject<Block> log;
         public final RegistryObject<Block> wood;
         public final RegistryObject<Block> stripped_log;
@@ -103,7 +105,7 @@ public class AzaleaBlocks {
         public final RegistryObject<Block> button;
 
         public WoodType(AzaleaColors color) {
-            String name = color.title;
+            this.name = color.title;
             this.log = registerBlock(name + "_azalea_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
             this.wood = registerBlock(name + "_azalea_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
             this.stripped_log = registerBlock("stripped_" + name + "_azalea_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
@@ -112,9 +114,6 @@ public class AzaleaBlocks {
             this.stair = registerBlock(name + "_azalea_stairs", () -> new StairBlock(planks.get().defaultBlockState(), BlockBehaviour.Properties.copy(planks.get())));
             this.slab = registerBlock(name + "_azalea_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
             this.door = registerBlock(name + "_azalea_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
-            if (Services.PLATFORM.isModLoaded("halfdoors")) {
-                Services.PLATFORM.registerHalfDoor(ColorfulAzaleas.id(name + "_azalea_halfdoor"));
-            }
             this.trapdoor = registerBlock(name + "_azalea_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)));
             this.fence = registerBlock(name + "_azalea_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
             this.fence_gate = registerBlock(name + "_azalea_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));

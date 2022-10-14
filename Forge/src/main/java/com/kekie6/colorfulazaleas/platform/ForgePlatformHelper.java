@@ -44,11 +44,6 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public void registerHalfDoor(ResourceLocation resourceLocation) {
-        // Not used on Forge, Half Doors does not have a Forge version.
-    }
-
-    @Override
     public CreativeModeTab getCreativeTab() {
         return ColorfulAzaleasForge.CREATIVE_TAB;
     }

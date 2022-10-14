@@ -44,14 +44,6 @@ public interface IPlatformHelper {
 
     /**
      *
-     * Registers a half door, this should only be run if the halfdoors mod is present.
-     *
-     * @param resourceLocation The resource location to register the half door under.
-     */
-    void registerHalfDoor(ResourceLocation resourceLocation);
-
-    /**
-     *
      * @return The creative tab for the colorful azalea blocks.
      */
     CreativeModeTab getCreativeTab();

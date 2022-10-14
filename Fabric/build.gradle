@@ -23,7 +23,7 @@ dependencies {
     compileOnly group: 'com.google.auto.service', name: 'auto-service', version: auto_service_version
     annotationProcessor group: 'com.google.auto.service', name: 'auto-service', version: auto_service_version
 
-    modImplementation "amymialee:half-doors:${half_doors_version}"
+    modCompileOnly "amymialee:half-doors:${half_doors_version}"
 
     implementation project(":Common")
 }

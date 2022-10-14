@@ -1,9 +1,11 @@
 package com.kekie6.colorfulazaleas;
 
+import com.kekie6.colorfulazaleas.compat.AzaleaHalfdoors;
 import com.kekie6.colorfulazaleas.registry.AzaleaBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
@@ -16,8 +18,15 @@ public class ColorfulAzaleasFabric implements ModInitializer {
 
         for (int i = 0; i < AzaleaBlocks.trees.length; i++) {
             AzaleaBlocks.ColorfulTree tree = AzaleaBlocks.trees[i];
-            StrippableBlockRegistry.register(tree.woodType.log.get(), tree.woodType.stripped_log.get());
-            StrippableBlockRegistry.register(tree.woodType.wood.get(), tree.woodType.stripped_wood.get());
+            registerStrippableBlocks(tree.woodType);
+            if (FabricLoader.getInstance().isModLoaded("halfdoors")) {
+                AzaleaHalfdoors.registerHalfdoors(tree.woodType);
+            }
         }
+    }
+
+    private static void registerStrippableBlocks(AzaleaBlocks.WoodType woodType) {
+        StrippableBlockRegistry.register(woodType.log.get(), woodType.stripped_log.get());
+        StrippableBlockRegistry.register(woodType.wood.get(), woodType.stripped_wood.get());
     }
 }
