@@ -3,12 +3,12 @@
   "group": "bark",
   "ingredients": [
     {
-      "count": 4,
+      "count": 1,
       "item": "colorfulazaleas:roze_azalea_log"
     }
   ],
   "result": {
-    "count": 3,
+    "count": 4,
     "item": "colorfulazaleas:roze_azalea_wood"
   }
 }
