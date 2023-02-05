@@ -3,7 +3,7 @@
   "group": "bark",
   "key": {
     "*": {
-      "item": "colorfulazaleas:walnut_azalea_log"
+      "item": "colorfulazaleas:stripped_roze_azalea_log"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "colorfulazaleas:walnut_azalea_wood"
+    "item": "colorfulazaleas:stripped_roze_azalea_wood"
   }
 }

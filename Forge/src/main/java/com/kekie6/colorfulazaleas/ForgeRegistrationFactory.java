@@ -1,4 +1,4 @@
-package net.merchantpug.bovinesandbuttercups;
+package com.kekie6.colorfulazaleas;
 
 import com.google.auto.service.AutoService;
 import com.kekie6.colorfulazaleas.registry.RegistrationProvider;
