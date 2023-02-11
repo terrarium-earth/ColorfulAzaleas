@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[43,)"
-license="Modified-MIT-License"
+license="Terrarium Licence"
 
 [[mods]]
 modId="colorfulazaleas"
