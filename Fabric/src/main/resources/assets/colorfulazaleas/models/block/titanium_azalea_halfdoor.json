@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "halfdoors:block/door",
   "textures": {
-    "layer0": "colorfulazaleas:item/titanium_azalea_halfdoor_item"
+    "bottom": "colorfulazaleas:block/titanium_azalea_halfdoor"
   }
 }
