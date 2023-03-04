@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": {"model": "colorfulazaleas:block/orange_flowering_azalea_leaves"}
+    "": {
+      "model": "colorfulazaleas:block/orange_flowering_azalea_leaves"
+    }
   }
 }
