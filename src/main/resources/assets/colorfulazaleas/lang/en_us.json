@@ -35,7 +35,9 @@
   "block.colorfulazaleas.purple_azalea_leaves": "Purple Azalea Leaves",
   "block.colorfulazaleas.purple_azalea_sapling": "Purple Azalea Sapling",
   "block.colorfulazaleas.purple_drooping_azalea_leaves": "Purple Drooping Azalea Leaves",
+
   "itemGroup.colorfulazaleas.colorful_azaleas": "Colorful Azaleas",
+
   "block.colorfulazaleas.azule_azalea_planks": "Azule Azalea Planks",
   "block.colorfulazaleas.azule_azalea_log": "Azule Azalea Log",
   "block.colorfulazaleas.azule_azalea_wood": "Azule Azalea Wood",
@@ -134,6 +136,7 @@
   "block.colorfulazaleas.azule_azalea_door": "Azule Azalea Door",
   "block.colorfulazaleas.azule_azalea_trapdoor": "Azule Azalea Trapdoor",
   "block.colorfulazaleas.azule_azalea_halfdoor": "Azule Azalea Halfdoor",
+
   "tag.colorfulazaleas.azaleas": "Azaleas",
   "tag.colorfulazaleas.azule_azalea_logs": "Azule Azalea Logs",
   "tag.colorfulazaleas.bright_azalea_logs": "Bright Azalea Logs",

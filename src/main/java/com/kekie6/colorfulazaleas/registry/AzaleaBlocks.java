@@ -101,12 +101,12 @@ public class AzaleaBlocks {
         public final Block stripped_log;
         public final Block stripped_wood;
         public final Block planks;
-        public final Block stair;
+        public final Block stairs;
         public final Block slab;
-        public final Block door;
-        public final Block trapdoor;
         public final Block fence;
         public final Block fence_gate;
+        public final Block door;
+        public final Block trapdoor;
         public final Block pressure_plate;
         public final Block button;
 
@@ -118,12 +118,12 @@ public class AzaleaBlocks {
             this.stripped_log = registerBlock("stripped_" + name + "_azalea_log", new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
             this.stripped_wood = registerBlock("stripped_" + name + "_azalea_wood", new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             this.planks = registerBlock(name + "_azalea_planks", new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-            this.stair = registerBlock(name + "_azalea_stairs", new StairBlock(planks.defaultBlockState(), BlockBehaviour.Properties.copy(planks)));
+            this.stairs = registerBlock(name + "_azalea_stairs", new StairBlock(planks.defaultBlockState(), BlockBehaviour.Properties.copy(planks)));
             this.slab = registerBlock(name + "_azalea_slab", new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            this.door = registerBlock(name + "_azalea_door", new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BLOCK_SET_TYPE));
-            this.trapdoor = registerBlock(name + "_azalea_trapdoor", new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BLOCK_SET_TYPE));
             this.fence = registerBlock(name + "_azalea_fence", new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
             this.fence_gate = registerBlock(name + "_azalea_fence_gate", new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), WOOD_TYPE));
+            this.door = registerBlock(name + "_azalea_door", new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BLOCK_SET_TYPE));
+            this.trapdoor = registerBlock(name + "_azalea_trapdoor", new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BLOCK_SET_TYPE));
             this.pressure_plate = registerBlock(name + "_azalea_pressure_plate", new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BLOCK_SET_TYPE));
             this.button = registerBlock(name + "_azalea_button", new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BLOCK_SET_TYPE, 30, true));
 
