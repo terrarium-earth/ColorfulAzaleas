@@ -74,6 +74,8 @@ public class AzaleaBlocks {
             }, BlockBehaviour.Properties.copy(Blocks.AZALEA).noOcclusion()));
 
             addBlockToAzaleaLootTable(sapling);
+            
+            CompostingChanceRegistry.INSTANCE.add(sapling, 0.65F);
         }
 
     }
