@@ -10,8 +10,8 @@ public class ColorfulAzaleasClient implements ClientModInitializer {
     public void onInitializeClient() {
         for (int i = 0; i < AzaleaBlocks.AzaleaColors.values().length; i++) {
             AzaleaBlocks.ColorfulTree tree = AzaleaBlocks.trees[i];
-            BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), tree.sapling, tree.floweringLeaves,
-                    tree.bloomingLeaves, tree.azaleaLeaves, tree.droopingLeaves);
+            BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), tree.sapling, tree.pottedSapling, tree.floweringLeaves, tree.bloomingLeaves, tree.azaleaLeaves, tree.droopingLeaves);
+            
             AzaleaBlocks.WoodSet wood = tree.woodSet;
             BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), wood.door, wood.trapdoor);
         }

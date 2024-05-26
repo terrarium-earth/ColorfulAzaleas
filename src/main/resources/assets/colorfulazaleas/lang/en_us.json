@@ -130,6 +130,14 @@
   "block.colorfulazaleas.azule_azalea_door": "Azule Azalea Door",
   "block.colorfulazaleas.azule_azalea_trapdoor": "Azule Azalea Trapdoor",
 
+  "block.colorfulazaleas.potted_orange_azalea_sapling": "Potted Orange Azalea Sapling",
+  "block.colorfulazaleas.potted_yellow_azalea_sapling": "Potted Yellow Azalea Sapling",
+  "block.colorfulazaleas.potted_red_azalea_sapling": "Potted Red Azalea Sapling",
+  "block.colorfulazaleas.potted_blue_azalea_sapling": "Potted Blue Azalea Sapling",
+  "block.colorfulazaleas.potted_pink_azalea_sapling": "Potted Pink Azalea Sapling",
+  "block.colorfulazaleas.potted_purple_azalea_sapling": "Potted Purple Azalea Sapling",
+  "block.colorfulazaleas.potted_white_azalea_sapling": "Potted White Azalea Sapling",
+
   "tag.colorfulazaleas.azaleas": "Azaleas",
   "tag.colorfulazaleas.azule_azalea_logs": "Azule Azalea Logs",
   "tag.colorfulazaleas.bright_azalea_logs": "Bright Azalea Logs",
