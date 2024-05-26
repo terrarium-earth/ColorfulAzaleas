@@ -1,15 +1,11 @@
 package com.kekie6.colorfulazaleas;
 
+import com.kekie6.colorfulazaleas.decorators.*;
 import com.kekie6.colorfulazaleas.registry.*;
-import com.kekie6.colorfulazaleas.util.*;
 import net.fabricmc.api.*;
-import net.fabricmc.fabric.api.itemgroup.v1.*;
-import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.core.*;
 import net.minecraft.core.registries.*;
-import net.minecraft.network.chat.*;
 import net.minecraft.resources.*;
-import net.minecraft.world.item.*;
 import net.minecraft.world.level.levelgen.feature.treedecorators.*;
 import org.slf4j.*;
 
