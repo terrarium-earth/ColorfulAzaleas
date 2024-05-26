@@ -18,7 +18,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:oak_log",
+        "Name": "colorfulazaleas:walnut_azalea_log",
         "Properties": {
           "axis": "y"
         }
@@ -41,7 +41,7 @@
         {
           "weight": 1,
           "data": {
-            "Name": "minecraft:flowering_azalea_leaves",
+            "Name": "colorfulazaleas:walnut_azalea_leaves",
             "Properties": {
               "distance": "7",
               "persistent": "false",
@@ -52,26 +52,49 @@
       ]
     },
     "trunk_placer": {
-      "type": "minecraft:bending_trunk_placer",
-      "base_height": 4,
-      "height_rand_a": 2,
-      "height_rand_b": 0,
-      "bend_length": {
-        "type": "minecraft:uniform",
-        "value": {
-          "min_inclusive": 1,
-          "max_inclusive": 2
-        }
-      },
-      "min_height_for_leaves": 3
+      "type": "minecraft:fancy_trunk_placer",
+      "base_height": 8,
+      "height_rand_a": 4,
+      "height_rand_b": 6
     },
     "foliage_placer": {
-      "type": "minecraft:random_spread_foliage_placer",
+      "type": "minecraft:fancy_foliage_placer",
       "radius": 3,
-      "offset": 0,
-      "foliage_height": 2,
-      "leaf_placement_attempts": 50
+      "offset": 3,
+      "height": 3
     },
-    "decorators": []
+    "decorators": [
+      {
+        "type": "minecraft:attached_to_leaves",
+        "probability": 1,
+        "exclusion_radius_xz": 0,
+        "exclusion_radius_y": 1,
+        "required_empty_blocks": 1,
+        "block_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "colorfulazaleas:purple_blooming_azalea_leaves"
+          }
+        },
+        "directions": [
+          "down"
+        ]
+      },
+      {
+        "type": "colorfulazaleas:colorful_tree_decorator",
+        "leaf_block": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "colorfulazaleas:purple_drooping_azalea_leaves"
+          }
+        },
+        "log_block": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "colorfulazaleas:walnut_azalea_log"
+          }
+        }
+      }
+    ]
   }
 }

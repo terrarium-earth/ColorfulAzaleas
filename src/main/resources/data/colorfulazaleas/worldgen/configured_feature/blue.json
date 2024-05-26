@@ -66,9 +66,9 @@
     "decorators": [
       {
         "type": "minecraft:attached_to_leaves",
-        "probability": 0,
+        "probability": 1,
         "exclusion_radius_xz": 0,
-        "exclusion_radius_y": 0,
+        "exclusion_radius_y": 1,
         "required_empty_blocks": 1,
         "block_provider": {
           "type": "minecraft:simple_state_provider",
@@ -85,7 +85,7 @@
         "leaf_block": {
           "type": "minecraft:simple_state_provider",
           "state": {
-            "Name": "colorfulazaleas:azule_drooping_azalea_leaves"
+            "Name": "colorfulazaleas:blue_drooping_azalea_leaves"
           }
         },
         "log_block": {
